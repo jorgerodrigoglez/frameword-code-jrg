@@ -1,0 +1,389 @@
+/*------------------------------------*\
+    $SITIO
+\*------------------------------------*/
+
+
+@-webkit-viewport {
+	width : device-width;
+}
+
+@-moz-viewport {
+	width : device-width;
+}
+
+@-ms-viewport {
+	width : device-width;
+}
+
+@-o-viewport {
+	width : device-width;
+}
+
+@viewport {
+	width : device-width;
+}
+
+html {
+	background : $white;
+	font-size : 87.5%;
+	-webkit-overflow-scrolling : touch;
+	-webkit-tap-highlight-color : transparent;
+	-webkit-text-size-adjust : 100%;
+	-ms-text-size-adjust : 100%;
+}
+
+body {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	background-color : transparent;
+	font-family : $basefont;
+	line-height : $baselineheight;
+	color : $textcolor;
+}
+
+
+
+/**
+* A partir de aquí es donde debes escribir los estilos de posicionamiento
+* y detalles que forman tu web. Disfruta!
+*/
+
+
+
+/**
+* MAIN
+**/
+
+header{
+	background-color: $lightgrey;
+	padding: $baselineheight;
+}
+
+
+section{
+	display: flex;
+	width : 100%;
+	flex-direction: column;
+	background-color: $lightgrey;
+
+ 	 @include respond-to(medium){
+ 	 	flex-direction: row;
+ 	 	padding: $gutterwidth *2;
+ 	 }
+}
+
+article{
+	line-height: $gutterwidth;
+	padding: $gutterwidth;
+	margin-left: $gutterwidth / 2;
+	margin-right: $gutterwidth / 2;
+	margin-bottom: $gutterwidth / 4;
+	margin-top: $gutterwidth / 4;
+	background-color: $lightergrey;
+
+}
+
+
+footer{
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	background-color: $lightergrey;
+	line-height: $gutterwidth;
+	padding-top: $gutterwidth;
+	padding-bottom: $gutterwidth;
+	@extend  %text-center;
+
+	a{
+		display: table-cell;
+		font-size: fs(small);
+		@include respond-to(medium){
+	 	 	font-size: fs(normal);
+ 	 	}
+
+	}
+}
+
+
+/**
+* MAIN STYLES HOME & PAGES
+**/
+
+	.article__header{
+			margin-left: $gutterwidth / 2;
+			margin-right: $gutterwidth / 2;
+			background-color: $white;
+			@extend %text-center;
+			border-bottom: solid 2px $black;
+		}
+
+	.article__text{
+		font-family: $altfont;
+		font-size: fs(small);
+		line-height: $gutterwidth;
+	}
+
+	.article__list{
+		margin-left: $gutterwidth / 2;
+		margin-right: $gutterwidth / 2;
+		@extend %text-center;
+		background-color: $white;
+	}
+
+	.article__item{
+		line-height: $gutterwidth;
+	}
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+
+/**
+ * Paleta de colores
+ */
+ 	.div__basecolor{
+ 		padding: $gutterwidth;
+ 		background-color: $basecolor;
+ 		&:after{
+ 			content: "#{$basecolor}";
+ 		}
+ 	}
+
+ 	.div__basecolor--light{
+ 		padding: $gutterwidth;
+ 		background-color: $basecolor-light;
+ 		&:after{
+ 			content: "#{$basecolor-light}";
+ 		}
+ 	}
+
+ 	.div__secondary{
+ 		padding: $gutterwidth;
+ 		background-color: $secondary;
+ 		&:after{
+ 			content: "#{$secondary}";
+ 		}
+ 	}
+
+ 	.div__bordercolor{
+ 		padding: $gutterwidth;
+ 		background-color: $bordercolor;
+ 		&:after{
+ 			content: "#{$bordercolor}";
+ 		}
+ 	}
+
+ 	.div__compcolor{
+ 		padding: $gutterwidth;
+ 		background-color: $compcolor;
+ 		&:after{
+ 			content: "#{$compcolor}";
+ 		}
+ 	}
+
+ /**
+ * Escala de grises
+ */
+
+  	.div__black{
+ 		padding: $gutterwidth;
+ 		background-color: $black;
+ 		&:after{
+ 			content: "#{$black}";
+ 		}
+ 	}
+
+ 	.div__darkergrey {
+ 		padding: $gutterwidth;
+ 		background-color: $darkergrey ;
+ 		&:after{
+ 			content: "#{$darkergrey}";
+ 		}
+ 	}
+
+ 	.div__darkgrey{
+ 		padding: $gutterwidth;
+ 		background-color: $darkgrey;
+ 		&:after{
+ 			content: "#{$darkgrey}";
+ 		}
+ 	}
+
+ 	.div__grey{
+ 		padding: $gutterwidth;
+ 		background-color: $grey;
+ 		&:after{
+ 			content: "#{$grey}";
+ 		}
+ 	}
+
+ 	.div__lightgrey{
+ 		padding: $gutterwidth;
+ 		background-color: $lightgrey;
+ 		&:after{
+ 			content: "#{$lightgrey}";
+ 		}
+ 	}
+
+ 	.div__lightergrey{
+ 		padding: $gutterwidth;
+ 		background-color: $lightergrey;
+ 		&:after{
+ 			content: "#{$lightergrey}";
+ 		}
+ 	}
+
+ 	.div__white{
+ 		padding: $gutterwidth;
+ 		background-color: $white;
+ 		&:after{
+ 			content: "#{$white}";
+ 		}
+ 	}
+
+/**
+ * Definimos Colores y elementos de popups, mensajes de alerta, etc...
+ */
+
+.div__color-alert{
+ 		padding: $gutterwidth;
+ 		background-color: $color-alert;
+ 		&:after{
+ 			content: "#{$color-alert}";
+ 		}
+ 	}
+
+ 	.div__color-error {
+ 		padding: $gutterwidth;
+ 		background-color: $color-error ;
+ 		&:after{
+ 			content: "#{$color-error}";
+ 		}
+ 	}
+
+ 	.div__color-info{
+ 		padding: $gutterwidth;
+ 		background-color: $color-info;
+ 		&:after{
+ 			content: "#{$color-info}";
+ 		}
+ 	}
+
+ 	.div__color-iverse{
+ 		padding: $gutterwidth;
+ 		background-color: $color-inverse;
+ 		&:after{
+ 			content: "#{$color-inverse}";
+ 		}
+ 	}
+
+ 	.div__color-success{
+ 		padding: $gutterwidth;
+ 		background-color: $color-success;
+ 		&:after{
+ 			content: "#{$color-success}";
+ 		}
+ 	}
+
+ 	.div__color-warning{
+ 		padding: $gutterwidth;
+ 		background-color: $color-warning;
+ 		&:after{
+ 			content: "#{$color-warning}";
+ 		}
+ 	}
+
+/*------------------------------------*\
+    $TIPOGRAFÍA
+\*------------------------------------*/
+
+ /**
+* H GROUP
+**/
+
+.h1{
+    font-size: fs(huge);
+ }
+
+ .h2{
+    font-size: fs(big);
+ }
+
+ .h3{
+    font-size: fs(normal);
+ }
+
+ .h4{
+    font-size: fs(small);
+ }
+
+ .h5{
+    font-size: fs(x-small);
+ }
+
+ .h6{
+    font-size: fs(xx-small);
+ }
+
+  /**
+* FONTS
+**/
+
+.base__font{
+	font-family:$basefont;
+}
+
+.altfont{
+	font-family:$altfont;
+}
+
+.codefont{
+	font-family: $codefont;
+}
+
+//Tipo de fuente - impresa
+
+div.base__font:before{
+	font-weight: bold;
+	font-style: italic;
+	content: "#{$basefont}";
+}
+
+div.altfont:before{
+	font-weight: bold;
+	font-style: italic;
+	content: "#{$altfont}";
+}
+
+div.codefont:before{
+	font-weight: bold;
+	font-style: italic;
+	content: "#{$codefont}";
+}
+
+
+/*------------------------------------*\
+    $ICONOS EJEMPLOS
+\*------------------------------------*/
+
+.icon-1:before{
+	content: "\e009";
+	background-color: red;
+}
+
+.icon-2:before{
+	content: "\e000";
+
+
+}.icon-3:before{
+	content: "\e001";
+
+
+}.icon-4:before{
+	content: "\f13c";
+
+
+}.icon-5:before{
+	content: "\e002";
+}
