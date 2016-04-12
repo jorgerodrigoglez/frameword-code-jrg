@@ -1,4 +1,4 @@
-# Wakkos SASS framework
+# SASS framework
 
 ### Configuración:
 
@@ -6,9 +6,6 @@
 
 
 ### Breakpoints
-Los breakpoints los he colocado en EM en vez de pixels para que el diseño no se
-vea afectado por acciones como el ZOOM. Para más info leer a
-[Chris Coyer](http://css-tricks.com/why-ems/) y a [Lyza Gardner](http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/) con argumentos al respecto.
 
 ```scss
 $breakpoints: (
@@ -32,15 +29,6 @@ La convención de nombre sigue este patrón:
 * '.bloque__elemento' representa un descendente de '.bloque' que se ayuda de
 '.bloque' como un conjunto.
 * '.bloque--modificador' representa un estado diferente de '.bloque'.
-
-Una **analogía** del funcionamiento de las clases BEM sería:
-```css
-    .persona{}
-    .persona--mujer{}
-        .persona__mano{}
-        .persona__mano--izquierda{}
-        .persona__mano--derecha{}
-```
 
 ### Organización
 Los archivos de **SCSS** están todos dentro de la carpeta `scss` y distribuidos
