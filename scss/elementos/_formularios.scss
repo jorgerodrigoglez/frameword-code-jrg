@@ -15,7 +15,7 @@ form {
 		display : block;
 		width : 100%;
 		margin-bottom : $baselineheight * 2;
-		padding : 0;
+		padding : $gutterwidth / 2;
 		color : $textcolor;
 		border : 0;
 		border-bottom : $inputborderwidth $inputborderstyle $inputborder;

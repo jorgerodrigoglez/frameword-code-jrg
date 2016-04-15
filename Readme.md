@@ -7,74 +7,12 @@
 
 ### Breakpoints
 
-```scss
-$breakpoints: (
 
-  'small'  : 48em,
-  'medium' : 56.25em,
-  'large'  : 68.75em,
-
-) !default;
-```
 
 ### Nomenclatura
-La convención de nombre sigue este patrón:
-```css
-    .bloque{}
-    .bloque__elemento{}
-    .bloque--modificador{}
-```
 
-* '.bloque' representa el primer nivel de una abstracción o componente.
-* '.bloque__elemento' representa un descendente de '.bloque' que se ayuda de
-'.bloque' como un conjunto.
-* '.bloque--modificador' representa un estado diferente de '.bloque'.
 
 ### Organización
-Los archivos de **SCSS** están todos dentro de la carpeta `scss` y distribuidos
-de la siguiente manera:
-
-```
---scss
-		style.scss
-        -abstracciones
-                     _botones.scss
-                     _fonticon.scss
-                     _grid.scss
-                     _paginacion.scss
-                     _texturas.scss
-        --base
-                     _contenido.scss
-                     _reset.scss
-                     _debug.scss
-		--elementos
-                     _figure.scss
-                     _formulario.scss
-                     _imagenes.scss
-                     _links.scss
-                     _reset.scss
-                     _tipografia.scss
-                     _tablas.scss
-        --layout
-        			_navegacion.scss
-                    _sitio.scss
-        --lib
-                    _flex.scss
-        			_mixins.scss
-        			_placeholders.scss
-        			_settings.scss
-```
-
-El archivo `contenido.scss` se compila al principio del `style.css` para dar una
-guía de donde tenemos nuestros elementos y su nombre, gracias a los comentarios
-BEM na búsqueda `cmd/ctrl + f` en nuestro editor que empiece por $NOMBREDESECCION
-nos ayudará mucho a encontrar el contenido.
-
-A su vez están todas las secciones separadas unas de las otras para ubicar rápidamente
- cuando echamos un vistazo.
-
-El archivo `_debug.scss` lo usamos para tener una
-pequeña guía de la semántica de tu documento html.
 
 
 ### Gulp

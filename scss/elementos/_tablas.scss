@@ -12,6 +12,14 @@ table {
 	border-spacing : 0;
 	background-color : $tablebackground;
 
+	caption{
+		padding-bottom: 10px;
+		padding-top: 10px;
+		font-size: fs(normal);
+		font-weight: bold;
+		background-color: $lightergrey;
+	}
+
 	th,
 	td {
 		padding : 8px;
@@ -26,6 +34,10 @@ table {
 		font-weight : bold;
 	}
 
+	thead{
+		background-color: $lightergrey;
+	}
+
 	thead th {
 		vertical-align : bottom;
 	}
@@ -35,6 +47,7 @@ table {
 	thead:first-child tr:first-child th,
 	thead:first-child tr:first-child td {
 		border-top : 0;
+		background-color: $white;
 	}
 
 	tbody + tbody {
